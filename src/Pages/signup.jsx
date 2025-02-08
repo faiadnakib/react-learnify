@@ -17,7 +17,7 @@ const Signup = () => {
               <input
                 type="text"
                 id="name"
-                placeholder="Enter your full name"
+                placeholder="Enter your full name" 
                 required
               />
             </div>
