@@ -1,0 +1,86 @@
+body {
+    background: linear-gradient(to right, #ffea00, #f3ff46, #fffbcb);
+    font-family: "Arial", sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Fix content getting hidden behind the navbar */
+  .signup-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+    margin-top: 300px; /* Adjust to match navbar height */
+  }
+  
+  .signup-card {
+    max-width: 450px;
+    width: 100%;
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  h2 {
+    font-weight: bold;
+    color: #0077ff;
+    text-align: center;
+  }
+  
+  .input-group {
+    margin-bottom: 15px;
+  }
+  
+  .input-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .signup-btn {
+    width: 100%;
+    background: #7f00ff;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+  }
+  
+  .signup-btn:hover {
+    background: #e100ff;
+  }
+  
+  .text-center {
+    text-align: center;
+    margin-top: 15px;
+  }
+  
+  .text-center a {
+    color: #7f00ff;
+    text-decoration: none;
+  }
+  
+  .text-center a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Ensure footer stays at the bottom */
+  footer {
+    margin-top: 40px;
+    padding: 20px 0;
+    text-align: center;
+  }
