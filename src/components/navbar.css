@@ -1,0 +1,256 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: #333;
+  background-color: #fffbcc;
+  padding-top: 70px; /* Ensure content isn't hidden under navbar */
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(135deg, #ffcc00, #ffb300);
+  padding: 14px 30px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar:hover {
+  background: linear-gradient(135deg, #ffb300, #ff9c00);
+}
+
+/*Logo Bhai*/
+.logo {
+  display: flex; /* Use flexbox for alignment */
+  align-items: center; /* Vertically center the logo text */
+}
+
+.logo-text {
+  font-family: "Arial Rounded MT Bold", sans-serif; /* A friendly, rounded font */
+  font-size: 1.8rem; /* Adjust as needed */
+  font-weight: 600;
+  text-decoration: none;
+  color: #333; /* Or your preferred logo color */
+  transition: all 0.3s ease; /* Smooth transitions */
+  position: relative; /* For optional graphic positioning */
+}
+
+.logo-text:hover {
+  color: #007bff; /* Example hover color */
+  transform: scale(1.05); /* Slightly scale on hover */
+}
+
+/* Optional graphic (example - you can customize this) */
+.logo-text span {
+  position: absolute;
+  top: 50%;
+  right: -15px; /* Adjust position as needed */
+  transform: translateY(-50%);
+  width: 8px;
+  height: 8px;
+  background-color: #007bff; /* Example graphic color */
+  border-radius: 50%; /* Make it a circle */
+}
+
+/* Focused/Active State */
+.logo:focus,
+.logo:active {
+  outline: none; /* Remove outline */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4); /* Shadow on click */
+  transform: scale(1.05); /* Slight scaling when clicked */
+}
+
+/* Navigation Links */
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: 10px 15px;
+  transition: color 0.3s, transform 0.2s;
+  position: relative;
+}
+
+/* Hover Effect */
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 50%;
+  width: 0;
+  height: 3px;
+  background-color: #fff;
+  transition: width 0.3s ease, left 0.3s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+.nav-links a:hover {
+  color: #fff;
+  transform: scale(1.05);
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+}
+
+/* Search Bar */
+.search-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 5px 12px;
+  border-radius: 25px;
+  transition: background 0.3s;
+}
+
+.search-bar:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.search-bar input {
+  width: 200px;
+  padding: 7px 12px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 20px;
+  outline: none;
+  background: transparent;
+  color: #333;
+  transition: all 0.3s;
+}
+
+.search-bar input::placeholder {
+  color: #444;
+}
+
+.search-bar input:focus {
+  background: rgba(255, 255, 255, 0.8);
+  color: #222;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.search-bar button {
+  padding: 8px 15px;
+  font-size: 1rem;
+  background-color: #fff;
+  color: #333;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.search-bar button:hover {
+  background-color: #333;
+  color: #ffd700;
+}
+
+/* Authentication Buttons */
+.auth-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.auth-buttons a {
+  padding: 8px 20px;
+  text-decoration: none;
+  color: #333;
+  background-color: #ffd700;
+  border: 2px solid #ffd700;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: all 0.3s ease-in-out;
+}
+
+.auth-buttons a:hover {
+  background-color: #333;
+  color: #ffd700;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .navbar {
+    flex-direction: column;
+    text-align: center;
+    padding: 12px 15px;
+  }
+
+  .nav-links {
+    margin-top: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .search-bar {
+    margin-top: 10px;
+  }
+
+  .auth-buttons {
+    margin-top: 10px;
+  }
+}
+
+/* Navbar styling */
+.navbar {
+  background-color: #0066ff;
+  padding: 10px 20px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed; /* Make the navbar fixed at the top */
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000; /* Ensure navbar stays on top */
+}
+
+.navbar .logo {
+  font-size: 1.5rem;
+}
+
+.navbar .links {
+  display: flex;
+  gap: 20px;
+}
+
+.navbar .links a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.navbar .links a:hover {
+  text-decoration: underline;
+}
+
+/* Content below the navbar */
+.content {
+  margin-top: 70px; /* Add top margin to ensure content is not hidden behind navbar */
+  padding: 20px;
+}
+
+/* Other styles for page content */

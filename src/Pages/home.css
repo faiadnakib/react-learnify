@@ -1,0 +1,242 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f9f9f9;
+  min-height: 100vh;
+  padding-top: 60px; /* Adjust based on the height of your navbar */
+  transition: all 0.3s ease;
+}
+
+/* Content wrapper that makes space for Navbar */
+.content {
+  padding-bottom: 50px; /* Ensure space for Footer */
+}
+
+/* Navbar Styling */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px; /* Adjust based on your navbar height */
+  background-color: #2c3e50;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #ecf0f1;
+}
+
+.navbar .nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.navbar .nav-links a {
+  color: #ecf0f1;
+  text-decoration: none;
+  padding: 10px 15px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  border-radius: 4px;
+}
+
+.navbar .nav-links a:hover,
+.navbar .nav-links a:focus {
+  background-color: #2980b9;
+  color: #fff;
+}
+
+.navbar .search-bar input {
+  padding: 8px;
+  margin-right: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  outline: none;
+}
+
+.navbar .search-bar button {
+  background-color: #2980b9;
+  color: white;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.navbar .search-bar button:hover {
+  background-color: #3498db;
+}
+
+/* Dropdown menu styling */
+.navbar .nav-links .dropdown {
+  position: relative;
+}
+
+.navbar .nav-links .dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.navbar .nav-links .dropdown .dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #34495e;
+  min-width: 160px;
+  border-radius: 5px;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+  padding: 10px;
+}
+
+.navbar .nav-links .dropdown .dropdown-menu a {
+  padding: 10px;
+  color: #ecf0f1;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.navbar .nav-links .dropdown .dropdown-menu a:hover {
+  background-color: #2980b9;
+  color: #fff;
+}
+
+/* Footer Styling */
+footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  background-color: #2c3e50;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 1rem;
+  box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  margin-top: 80px; /* Adjust for the navbar */
+  padding: 20px;
+  background-color: #fff;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  font-weight: bold;
+  color: #333;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+/* Buttons Styling */
+.hero-buttons button {
+  padding: 12px 30px;
+  margin: 10px;
+  border: none;
+  cursor: pointer;
+  background-color: #0066ff;
+  color: white;
+  font-size: 1.1rem;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.hero-buttons button:hover {
+  background-color: #0057cc;
+}
+
+/* Skill Categories */
+.skill-category {
+  padding: 15px;
+  background-color: #fff;
+  cursor: pointer;
+  margin: 15px 0;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.skill-category:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.category-details {
+  display: none;
+}
+
+.category-details.show {
+  display: block;
+  background-color: #e0e0e0;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.popular-topics {
+  display: flex;
+  gap: 20px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+
+.popular-topic {
+  background-color: #ecf0f1;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.popular-topic:hover {
+  transform: translateY(-5px);
+  background-color: #bdc3c7;
+}
+
+.statistics {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
+}
+
+.statistic {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #2980b9;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .hero-buttons button {
+    width: 100%;
+  }
+  .popular-topics {
+    flex-direction: column;
+  }
+}
