@@ -12,8 +12,9 @@ const Home = () => {
 
   return (
     <>
-      {/* Navbar is always present */}
-      <Navbar />
+      <div className="ajob">
+        <Navbar />
+      </div>
 
       {/* Content Wrapper */}
       <div className="content">
@@ -64,16 +65,16 @@ const Home = () => {
           </div>
         </div>
 
-        <div className="popular-topics">
+        <div className="skill-categories">
           <div
-            className="popular-topic"
-            onClick={() => handleCategoryClick("chatgpt")}
+            className="skill-category"
+            onClick={() => handleCategoryClick("Chatgpt")}
           >
-            ChatGPT
+            Chatgpt
           </div>
           <div
             className={`category-details ${
-              activeCategory === "chatgpt" ? "show" : ""
+              activeCategory === "Chatgpt" ? "show" : ""
             }`}
           >
             <p>
@@ -83,19 +84,19 @@ const Home = () => {
           </div>
 
           <div
-            className="popular-topic"
-            onClick={() => handleCategoryClick("python")}
+            className="skill-category"
+            onClick={() => handleCategoryClick(" Python")}
           >
             Python
           </div>
           <div
             className={`category-details ${
-              activeCategory === "python" ? "show" : ""
+              activeCategory === " Python" ? "show" : ""
             }`}
           >
             <p>
               Get started with Python programming, from basic syntax to advanced
-              techniques!
+              techniques
             </p>
           </div>
         </div>
@@ -110,8 +111,9 @@ const Home = () => {
         </div>
       </div>
 
-      {/* Footer is always at the bottom */}
-      <Footer />
+      <div>
+        <Footer />
+      </div>
     </>
   );
 };

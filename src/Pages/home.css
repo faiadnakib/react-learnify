@@ -1,4 +1,5 @@
 /* General Reset */
+@import "tailwindcss";
 * {
   margin: 0;
   padding: 0;
@@ -8,15 +9,19 @@
 /* Body Styling */
 body {
   font-family: "Arial", sans-serif;
-  background-color: #f9f9f9;
+  background-color: #cfff90;
   min-height: 100vh;
-  padding-top: 60px; /* Adjust based on the height of your navbar */
   transition: all 0.3s ease;
+  padding-top: 170px; /* Adjusted to avoid large gap between content and navbar */
+  padding-top: calc(
+    170px + 1rem
+  ); /* This ensures content starts below the navbar */
 }
 
 /* Content wrapper that makes space for Navbar */
 .content {
-  padding-bottom: 50px; /* Ensure space for Footer */
+  padding-bottom: 150px; /* Ensure space for Footer */
+  padding-top: 420px; /* To ensure content doesn't touch the navbar */
 }
 
 /* Navbar Styling */
@@ -62,6 +67,7 @@ body {
   color: #fff;
 }
 
+/* Search Bar Styling */
 .navbar .search-bar input {
   padding: 8px;
   margin-right: 10px;
@@ -83,39 +89,6 @@ body {
   background-color: #3498db;
 }
 
-/* Dropdown menu styling */
-.navbar .nav-links .dropdown {
-  position: relative;
-}
-
-.navbar .nav-links .dropdown:hover .dropdown-menu {
-  display: block;
-}
-
-.navbar .nav-links .dropdown .dropdown-menu {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: #34495e;
-  min-width: 160px;
-  border-radius: 5px;
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
-  padding: 10px;
-}
-
-.navbar .nav-links .dropdown .dropdown-menu a {
-  padding: 10px;
-  color: #ecf0f1;
-  text-decoration: none;
-  font-size: 0.9rem;
-}
-
-.navbar .nav-links .dropdown .dropdown-menu a:hover {
-  background-color: #2980b9;
-  color: #fff;
-}
-
 /* Footer Styling */
 footer {
   position: relative;
@@ -132,7 +105,7 @@ footer {
 /* Hero Section */
 .hero {
   text-align: center;
-  margin-top: 80px; /* Adjust for the navbar */
+  margin-top: 100px; /* Adjust for the navbar */
   padding: 20px;
   background-color: #fff;
 }
