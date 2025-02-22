@@ -9,7 +9,7 @@ import Login from "./Pages/login.jsx";
 import SignUp from "./Pages/signup.jsx";
 import Navbar from "./components/navbar.jsx";
 import Footer from "./components/footer.jsx";
-
+import "./index.css";
 createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <Router>
@@ -22,7 +22,7 @@ createRoot(document.getElementById("root")).render(
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
       </Routes>
-      <Footer />
     </Router>
+    <Footer />
   </React.StrictMode>
 );

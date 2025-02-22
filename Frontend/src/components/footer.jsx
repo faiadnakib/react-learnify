@@ -9,8 +9,8 @@ const Footer = () => {
         <div className="footer-top">
           <div className="footer-logo">Learnify</div>
           <p className="footer-description">
-            Your gateway to mastering technical skills and advancing your
-            career.
+            Empowering individuals to master technical skills and advance in
+            their careers.
           </p>
           <div className="social-icons">
             <a href="#" className="social-link">
