@@ -7,18 +7,34 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
-dist
-dist-ssr
+# Ignore node_modules globally
+node_modules/
+
+# Ignore dist and build files
+dist/
+dist-ssr/
 *.local
 
 # Editor directories and files
-.vscode/*
+.vscode/
 !.vscode/extensions.json
-.idea
+.idea/
 .DS_Store
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
 *.sw?
+
+# Backend-specific ignores
+backend/node_modules/
+backend/.env
+backend/dist/
+
+# Ignore any env files
+.env
+.env.local
+.env.development
+.env.production
+.env.test
+
