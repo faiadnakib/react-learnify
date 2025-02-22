@@ -84,7 +84,6 @@ const BookPage = () => {
   return (
     <>
       <div className="book-page">
-        <Navbar /> {/* Include the Navbar */}
         <div className="books-section">
           <h1>Books Collection</h1>
           <div className="books-container">
@@ -100,9 +99,6 @@ const BookPage = () => {
             ))}
           </div>
         </div>
-      </div>
-      <div>
-        <Footer />
       </div>
     </>
   );

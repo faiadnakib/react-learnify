@@ -1,0 +1,62 @@
+.pdf-section {
+  text-align: center;
+  margin: 40px 20px;
+  margin-top: 600px;
+}
+
+.pdf-section h2 {
+  font-size: 2rem;
+  color: #222; /* Darker for better contrast */
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.pdf-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.pdf-item {
+  background: rgba(255, 255, 255, 0.2); /* Soft glassmorphism effect */
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+  transition: transform 0.3s, background 0.3s, box-shadow 0.3s;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: capitalize;
+  color: #444;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.pdf-item:hover {
+  transform: scale(1.05);
+  background: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.pdf-viewer {
+  margin-top: 30px;
+  padding: 20px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(15px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+#pdfEmbed {
+  border: none;
+  width: 100%;
+  height: 600px;
+  border-radius: 8px;
+}

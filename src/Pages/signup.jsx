@@ -7,7 +7,6 @@ import "./signup.css";
 const Signup = () => {
   return (
     <>
-      <Navbar />
       <div className="signup-container">
         <div className="signup-card">
           <h2 className="text-center">Create an Account</h2>
@@ -57,7 +56,6 @@ const Signup = () => {
           </p>
         </div>
       </div>
-      <Footer />
     </>
   );
 };

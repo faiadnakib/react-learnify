@@ -12,10 +12,6 @@ const Home = () => {
 
   return (
     <>
-      <div className="ajob">
-        <Navbar />
-      </div>
-
       {/* Content Wrapper */}
       <div className="content">
         <div className="hero">
@@ -109,10 +105,6 @@ const Home = () => {
             <strong>11M+</strong> learners
           </div>
         </div>
-      </div>
-
-      <div>
-        <Footer />
       </div>
     </>
   );
