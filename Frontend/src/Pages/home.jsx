@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-import Navbar from "../components/navbar.jsx";
-import Footer from "../components/footer.jsx";
 import "./home.css";
 
 const Home = () => {

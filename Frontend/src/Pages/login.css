@@ -22,11 +22,12 @@ body {
 }
 
 /* Container for centering the form */
-.container {
+.login-container {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100%;
+  margin-top: 80px; /* Add space for the navbar */
 }
 
 /* Card styling */

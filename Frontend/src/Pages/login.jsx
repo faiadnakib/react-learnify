@@ -1,63 +1,68 @@
 import React, { useState } from "react";
-import Navbar from "../components/navbar";
-import "./Login.css"; // Make sure to import the CSS file
-import Footer from "../components/footer";
+import { useAuthContext } from "../contexts/AuthContext";
+import "./Login.css"; // Import your custom CSS file
 
 const Login = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [validated, setValidated] = useState(false);
+  const { login } = useAuthContext();
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Handle login logic here
-    console.log("Email:", email, "Password:", password);
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const form = event.currentTarget;
+    if (form.checkValidity() === false) {
+      event.preventDefault();
+      event.stopPropagation();
+    }
+    const formData = new FormData(event.target);
+    const { username, password } = Object.fromEntries(formData.entries());
+    login(username, password);
+    setValidated(true);
   };
 
   return (
-    <>
-      <Navbar />
-      <div className="container">
-        <div className="card">
-          <h2 className="text-center">Welcome to Learnify</h2>
-          <form onSubmit={handleSubmit}>
-            <div className="mb-3">
-              <label htmlFor="email" className="form-label">
-                Email address
-              </label>
-              <input
-                type="email"
-                id="email"
-                className="form-control"
-                placeholder="Enter your email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                required
-              />
-            </div>
-            <div className="mb-3">
-              <label htmlFor="password" className="form-label">
-                Password
-              </label>
-              <input
-                type="password"
-                id="password"
-                className="form-control"
-                placeholder="Enter your password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                required
-              />
-            </div>
-            <button type="submit" className="btn btn-primary w-100">
+    <div className="login-container">
+      <div className="card">
+        <h2>Login</h2>
+        <form noValidate validated={validated} onSubmit={handleSubmit}>
+          <div className="mb-3">
+            <label className="form-label" htmlFor="username">
+              Username
+            </label>
+            <input
+              required
+              type="text"
+              name="username"
+              id="username"
+              placeholder="Username"
+              className="form-control"
+            />
+          </div>
+
+          <div className="mb-3">
+            <label className="form-label" htmlFor="password">
+              Password
+            </label>
+            <input
+              required
+              type="password"
+              name="password"
+              id="password"
+              placeholder="Password"
+              className="form-control"
+            />
+          </div>
+
+          <div className="mb-3">
+            <button type="submit" className="btn-primary">
               Login
             </button>
-          </form>
-          <p className="text-center mt-3">
-            Don't have an account? <a href="/signup">Sign Up</a>
-          </p>
-        </div>
+          </div>
+        </form>
+        <p>
+          Don't have an account? <a href="/signup">Sign up here</a>
+        </p>
       </div>
-    </>
+    </div>
   );
 };
 
