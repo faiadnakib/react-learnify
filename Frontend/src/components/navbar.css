@@ -3,21 +3,24 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 15px 20px;
+  padding: 15px 30px;
   background: linear-gradient(135deg, #4a90e2, #003366);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   position: fixed;
   width: 100%;
   top: 0;
   left: 0;
   z-index: 1000;
-  transition: background 0.3s ease-in-out;
+  transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  border-bottom: 2px solid #f4c430; /* Added subtle line for elegance */
+  box-sizing: border-box; /* Ensure padding doesn't affect width */
 }
 
 /* Dark Mode */
 .navbar.dark-mode {
   background: linear-gradient(135deg, #1a1a1a, #000);
   color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
 }
 
 /* Navbar container */
@@ -25,32 +28,41 @@
   display: flex;
   align-items: center;
   width: 100%;
+  justify-content: space-between; /* Added space between elements */
+  box-sizing: border-box; /* Ensure the container respects width */
 }
 
 /* Logo */
 .logo .logo-text {
-  font-size: 26px;
+  font-size: 28px;
   font-weight: bold;
   color: #fff;
   text-decoration: none;
-  transition: color 0.3s;
+  transition: color 0.3s ease;
+  flex-shrink: 0; /* Prevent logo from shrinking */
 }
 
 .navbar.dark-mode .logo-text {
   color: #ffffff;
 }
 
+.logo .logo-text:hover {
+  color: #f4c430; /* Subtle hover effect for logo */
+}
+
 /* Navigation Links */
 .nav-links {
   display: flex;
-  gap: 20px;
+  gap: 25px;
   margin-left: auto;
+  align-items: center; /* Ensure links are vertically aligned */
+  flex-shrink: 0; /* Prevent shrinking of nav links */
 }
 
 .nav-link {
   text-decoration: none;
   color: white;
-  font-weight: 500;
+  font-weight: 600;
   transition: color 0.3s;
 }
 
@@ -60,6 +72,7 @@
 
 .nav-link:hover {
   color: #f4c430;
+  transform: translateY(-2px); /* Smooth hover effect */
 }
 
 /* Search Bar */
@@ -69,8 +82,14 @@
   border: 1px solid #fff;
   border-radius: 50px;
   overflow: hidden;
-  margin-left: 20px;
   background: rgba(202, 202, 202, 0.671);
+  transition: background 0.3s ease;
+  padding: 5px 15px;
+  flex-shrink: 0; /* Prevent search bar from shrinking */
+}
+
+.search-bar:hover {
+  background: rgba(202, 202, 202, 0.9);
 }
 
 .search-bar input {
@@ -79,16 +98,18 @@
   outline: none;
   background: transparent;
   color: white;
+  font-size: 16px;
   flex-grow: 1;
 }
 
 .search-bar button {
-  padding: 10px 15px;
+  padding: 8px 12px;
   background: #f4c430;
   color: black;
   border: none;
   cursor: pointer;
   transition: background 0.3s;
+  border-radius: 50%;
 }
 
 .search-bar button:hover {
@@ -98,22 +119,25 @@
 /* Auth Buttons */
 .auth-buttons {
   display: flex;
-  gap: 10px;
-  margin-left: 20px;
+  gap: 15px;
+  align-items: center;
+  margin-left: 30px;
+  flex-shrink: 0; /* Prevent auth buttons from shrinking */
 }
 
 .auth-button {
-  padding: 10px 15px;
-  border-radius: 20px;
+  padding: 8px 15px;
+  border-radius: 25px;
   background: #2a8eff;
   color: black;
   font-weight: bold;
   text-decoration: none;
-  transition: background 0.3s;
+  transition: background 0.3s, transform 0.2s;
 }
 
 .auth-button:hover {
   background: #5bf4ff;
+  transform: translateY(-2px); /* Smooth hover effect */
 }
 
 /* Dark Mode Toggle */
@@ -121,13 +145,36 @@
   display: flex;
   align-items: center;
   cursor: pointer;
-  margin-left: 20px;
+  margin-left: 30px;
   color: white;
-  transition: color 0.3s;
+  transition: color 0.3s ease;
+  padding: 8px;
+  flex-shrink: 0; /* Prevent dark mode switch from shrinking */
 }
 
 .dark-mode-switch:hover {
-  color: #ffffff;
+  color: #f4c430;
+  transform: scale(1.1);
+}
+
+/* Profile Section */
+.auth-logged-in {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.auth-logged-in .auth-button {
+  background: transparent;
+  color: white;
+  padding: 10px 15px;
+  border: 2px solid #fff;
+  border-radius: 20px;
+}
+
+.auth-logged-in .auth-button:hover {
+  background: #f4c430;
+  color: black;
 }
 
 /* Mobile Menu Button */
@@ -152,7 +199,7 @@
     width: 100%;
     background: rgba(0, 0, 0, 0.9);
     flex-direction: column;
-    gap: 15px;
+    gap: 20px;
     padding: 20px;
     display: none;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
@@ -166,4 +213,50 @@
   .auth-buttons {
     display: none;
   }
+
+  .auth-logged-in {
+    flex-direction: column;
+  }
+
+  .auth-button {
+    padding: 10px 20px;
+  }
+}
+.auth-button {
+  padding: 8px 15px;
+  border-radius: 25px;
+  background: #2a8eff;
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.3s, transform 0.2s;
+  border: none;
+  cursor: pointer;
+}
+
+.auth-button:hover {
+  background: #5bf4ff;
+  transform: translateY(-2px); /* Smooth hover effect */
+}
+
+/* Ensure Profile & Logout Buttons match */
+.auth-logged-in .auth-button {
+  background: #2a8eff; /* Same as login/signup */
+  color: black;
+  border: none;
+  padding: 8px 15px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 25px;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.auth-logged-in .auth-button:hover {
+  background: #5bf4ff;
+  transform: translateY(-2px);
+}
+
+.auth-not-logged-in {
+  display: flex;
+  gap: 15px; /* Added gap between buttons */
 }

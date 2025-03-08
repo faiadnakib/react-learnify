@@ -24,7 +24,7 @@ export const AuthProvider = ({ children }) => {
       } catch (err) {
         if (err.response) {
           setUser(null);
-          navigate("/login");
+          navigate("/");
         } else {
           toast.error("Something went wrong");
         }

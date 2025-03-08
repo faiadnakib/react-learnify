@@ -24,7 +24,7 @@ const App = () => {
         {/* Home and other public routes */}
         <Route path="/" element={<Home />} />
         <Route path="/book" element={<Books />} />
-        <Route path="/pdf" element={<PDF />} />
+
         <Route path="/about" element={<About />} />
         <Route path="/example" element={<Example />} />
 
@@ -38,6 +38,7 @@ const App = () => {
           <Route element={<PrivateRoute />}>
             <Route path="profile" element={<Profile />} />
             <Route path="dashboard" element={<Dashboard />} />
+            <Route path="/pdf" element={<PDF />} />
           </Route>
         </Route>
       </Routes>

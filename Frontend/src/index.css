@@ -24,7 +24,7 @@ body {
 /* Content Styling */
 main {
   padding: 20px;
-  margin-top: 80px; /* Adjust to ensure it doesn't overlap with navbar */
+  margin-top: 90px; /* Adjust to ensure it doesn't overlap with navbar */
   flex-grow: 1; /* Ensure main content takes available space */
 }
 

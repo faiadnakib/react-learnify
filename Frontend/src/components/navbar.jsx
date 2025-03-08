@@ -68,7 +68,7 @@ const Navbar = () => {
             <div className="auth-logged-in">
               {/* Profile and Logout */}
               <Link to="/profile" className="auth-button">
-                <User size={22} /> Profile
+                Profile
               </Link>
               <button onClick={handleLogout} className="auth-button">
                 Log Out
