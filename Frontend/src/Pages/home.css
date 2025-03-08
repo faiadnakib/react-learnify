@@ -13,9 +13,6 @@ body {
   min-height: 100vh;
   transition: all 0.3s ease;
   padding-top: 170px; /* Adjusted to avoid large gap between content and navbar */
-  padding-top: calc(
-    170px + 1rem
-  ); /* This ensures content starts below the navbar */
 }
 
 /* Content wrapper that makes space for Navbar */
@@ -70,7 +67,7 @@ body {
   margin: 15px 0;
   border-radius: 5px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .skill-category:hover {
@@ -89,6 +86,7 @@ body {
   border-radius: 5px;
 }
 
+/* Popular Topics Section */
 .popular-topics {
   display: flex;
   gap: 20px;
@@ -110,6 +108,7 @@ body {
   background-color: #bdc3c7;
 }
 
+/* Statistics Section */
 .statistics {
   display: flex;
   justify-content: space-around;
@@ -127,7 +126,41 @@ body {
   .hero-buttons button {
     width: 100%;
   }
+
   .popular-topics {
     flex-direction: column;
+    gap: 15px; /* Reduce gap in mobile view */
+  }
+
+  .statistics {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .statistic {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+  }
+
+  /* Ensuring the hero section adjusts for mobile */
+  .hero {
+    margin-top: 60px; /* Less margin on mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 2.5rem; /* Slightly smaller title */
+  }
+
+  .hero p {
+    font-size: 1rem; /* Adjust paragraph font size for smaller screens */
+  }
+
+  .popular-topic {
+    width: 100%; /* Make popular topics stack vertically */
+    padding: 10px;
+    text-align: center;
   }
 }

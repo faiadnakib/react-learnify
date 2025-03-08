@@ -22,7 +22,7 @@ body {
   flex-grow: 1;
   padding: 20px;
   box-sizing: border-box;
-  margin-top: 670px; /* Adjusted for navbar height */
+  margin-top: 80px; /* Adjusted for navbar height */
 }
 
 .signup-card {

@@ -54,6 +54,23 @@ const Navbar = () => {
           <Link to="/about" className="nav-link" onClick={toggleMenu}>
             About Us
           </Link>
+
+          {/* Contribute Dropdown */}
+          <div className="nav-link contribute-dropdown">
+            <span>Contribute</span>
+            <div className="dropdown-menu">
+              <Link to="/ubook" className="dropdown-item" onClick={toggleMenu}>
+                Upload Book
+              </Link>
+              <Link
+                to="/uploadpdf"
+                className="dropdown-item"
+                onClick={toggleMenu}
+              >
+                Upload PDF
+              </Link>
+            </div>
+          </div>
         </nav>
 
         {/* Search Bar */}

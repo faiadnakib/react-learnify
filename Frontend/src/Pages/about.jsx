@@ -16,7 +16,10 @@ const About = () => {
         <div className="team-container">
           {/* Sample Team Members */}
           <div className="team-member">
-            <img src="https://via.placeholder.com/150" alt="Team Member" />
+            <img
+              src="https://res.cloudinary.com/dteiugdcu/image/upload/v1741439684/473276526_598659689423170_4338713192890401188_n_yyhepl.jpg"
+              alt="Team Member"
+            />
             <h3>Faiad Nakib</h3>
             <p>Founder & CEO</p>
             <div className="social-links">
@@ -25,7 +28,10 @@ const About = () => {
             </div>
           </div>
           <div className="team-member">
-            <img src="https://via.placeholder.com/150" alt="Team Member" />
+            <img
+              src="https://res.cloudinary.com/dteiugdcu/image/upload/v1741439651/jabin_s4sr01.jpg"
+              alt="Team Member"
+            />
             <h3>Jabin Tasnim</h3>
             <p>Co-Founder & CTO</p>
             <div className="social-links">
@@ -34,7 +40,10 @@ const About = () => {
             </div>
           </div>
           <div className="team-member">
-            <img src="https://via.placeholder.com/150" alt="Team Member" />
+            <img
+              src="https://res.cloudinary.com/dteiugdcu/image/upload/v1741439651/nafi_omdczq.jpg"
+              alt="Team Member"
+            />
             <h3>Ridwan Nafi</h3>
             <p>Co-Founder & CTO</p>
             <div className="social-links">

@@ -12,6 +12,98 @@
 }
 
 .book-card {
+  background-color: #aefff8;
+  border: 1px solid #ddd;
+  padding: 20px;
+  width: 250px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.book-card:hover {
+  transform: scale(1.05);
+}
+
+.book-image {
+  width: 100%;
+  height: 250px; /* Ensure a consistent height */
+  object-fit: cover; /* Ensures the image fits without distortion */
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.book-card h3 {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.book-card p {
+  font-size: 1rem;
+  color: #777;
+  margin-bottom: 15px;
+}
+
+.book-card a {
+  text-decoration: none;
+  color: #007bff;
+  font-weight: bold;
+  transition: color 0.3s ease-in-out;
+}
+
+.book-card a:hover {
+  color: #0056b3;
+}
+
+.books-section {
+  padding: 40px;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.books-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Enhanced style for the heading */
+.books-section h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #333;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  position: relative;
+  display: inline-block;
+  margin-bottom: 30px;
+}
+
+.books-section h1::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: #007bff; /* Change the color as needed */
+  border-radius: 2px;
+}
+
+.books-section h1 span {
+  font-size: 1.2rem;
+  color: #555;
+  display: block;
+  margin-top: 10px;
+}
+
+.book-card {
   background-color: #f9f9f9;
   border: 1px solid #ddd;
   padding: 20px;
@@ -20,15 +112,19 @@
   text-align: center;
   border-radius: 10px;
   transition: transform 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .book-card:hover {
   transform: scale(1.05);
 }
 
-.book-card img {
-  max-width: 100%;
-  height: auto;
+.book-image {
+  width: 100%;
+  height: 250px; /* Ensure a consistent height */
+  object-fit: cover; /* Ensures the image fits without distortion */
   border-radius: 5px;
   margin-bottom: 15px;
 }
