@@ -50,7 +50,7 @@ const Profile = () => {
 
   return (
     <div className="profile-container">
-      <h2 className="profile-title">Edit Profile</h2>
+      <h2 className="profile-title">Profile</h2>
       <Form noValidate validated={validated} onSubmit={handleSubmit}>
         <Row className="mb-3 justify-content-md-center">
           <Form.Group as={Col} md="4" controlId="validationCustom01">

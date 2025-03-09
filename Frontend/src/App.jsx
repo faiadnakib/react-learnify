@@ -15,6 +15,7 @@ import Profile from "./Pages/Profile.jsx";
 import Layout from "./Layout";
 import Example from "./Pages/Example.jsx";
 import UploadBook from "./Pages/uploadbook.jsx";
+import UploadPDF from "./Pages/uploadpdf.jsx";
 import "./index.css";
 const App = () => {
   return (
@@ -23,7 +24,6 @@ const App = () => {
       <Routes>
         {/* Home and other public routes */}
         <Route path="/" element={<Home />} />
-        <Route path="/ubook" element={<UploadBook />} />
         <Route path="/book" element={<Books />} />
         <Route path="/pdf" element={<PDF />} />
         <Route path="/about" element={<About />} />
@@ -39,6 +39,8 @@ const App = () => {
           <Route element={<PrivateRoute />}>
             <Route path="profile" element={<Profile />} />
             <Route path="dashboard" element={<Dashboard />} />
+            <Route path="/ubook" element={<UploadBook />} />
+            <Route path="/uploadpdf" element={<UploadPDF />} />
           </Route>
         </Route>
       </Routes>
